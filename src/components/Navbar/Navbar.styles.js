@@ -7,7 +7,6 @@ export const NavbarContainer = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
-    width: 100%;
 
     img {
         height: 70px;
@@ -20,7 +19,6 @@ export const NavbarContainer = styled.header`
 
         padding: 0 0px;
 
-        width: 100vh;
         img {
             height: 50px;
         }
