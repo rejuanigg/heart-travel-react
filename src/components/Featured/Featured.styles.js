@@ -23,6 +23,7 @@ export const FeaturedWrapper = styled.div`
     @media screen and (max-width: 350px) {
 
         grid-template-columns: repeat(1, 1fr);
+        place-content: center;
         
     }
 `
@@ -62,6 +63,12 @@ export const FeaturedBox = styled.div`
         object-fit: cover;
         border-radius: 5px  5px 0 0;
     }
+
+    @media screen and (max-width: 350px) {
+
+        width: 90%;
+
+    }
 `
 
 export const FeaturedInfo = styled.div`
@@ -85,5 +92,13 @@ export const FeaturedPrice = styled.div`
     align-items: center;
     justify-content:space-around;
     height: 80px;
+
+    @media screen and (max-width: 350px) {
+
+        & span {
+            font-size: 20px;
+        }
+        
+    }
 
 `

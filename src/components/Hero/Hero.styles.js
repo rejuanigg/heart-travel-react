@@ -36,9 +36,8 @@ export const InfoPage = styled.div `
     margin: 40px;
 
     @media screen and (max-width: 350px) {
-
-        gap: 12px;
-
+        flex-direction: column;
+        padding: 100px 0;
 }
 
 `

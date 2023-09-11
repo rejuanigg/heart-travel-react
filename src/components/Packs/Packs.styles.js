@@ -23,7 +23,7 @@ export const PacksTitle = styled.div`
 
 export const FilterContainer = styled.div`
     width: 90%;
-    height: 90px;
+    height: 60px;
     background-color: #eaeaea;
     display: grid;
     grid-gap: 2px;
@@ -34,14 +34,14 @@ export const FilterContainer = styled.div`
 
     @media screen and (max-width: 350px) {
 
-        grid-auto-columns: 50%;
+        grid-auto-columns: 160px;
         
     }
 
 `
 
 export const Filters = styled.a`
-    height: 50px;
+    height: 40px;
     width: 150px;
     display: flex;
     justify-content: center;
@@ -70,7 +70,12 @@ export const PacksList = styled.div`
     @media (max-width: 350px) {
 
         grid-template-columns: repeat(1, 1fr);
-        place-items: center;
+        place-content: center;
+
+    }
+
+    @media (max-width: 320px) {
+
 
     }
 
