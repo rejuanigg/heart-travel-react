@@ -14,7 +14,7 @@ export const NavbarContainer = styled.header`
         margin-left: 10px;
     }
 
-    @media (min-width: 350px) {
+    @media (max-width: 350px) {
 
         justify-content: space-around;
 
