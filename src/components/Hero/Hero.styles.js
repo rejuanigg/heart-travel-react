@@ -76,6 +76,7 @@ export const HeroTitleContainer = styled.div `
     & p {
         font-size: 15px;
         width: 80%;
+        font-weight: 600;
     }
 
     @media (max-width: 1189px) {
