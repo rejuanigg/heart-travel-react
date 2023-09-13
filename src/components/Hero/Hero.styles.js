@@ -12,6 +12,7 @@ export const HeroContainer = styled.div`
         position: absolute;
         object-fit: cover;
         margin: 20px;
+        filter: brightness(0.8);
     }
 
 
