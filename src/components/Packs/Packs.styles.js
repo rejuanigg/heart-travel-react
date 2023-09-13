@@ -28,7 +28,7 @@ export const FilterContainer = styled.div`
     display: grid;
     grid-gap: 2px;
     grid-auto-flow: column;
-    grid-auto-columns: 12%;
+    grid-auto-columns: 160px;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
 
@@ -71,13 +71,9 @@ export const PacksList = styled.div`
 
         grid-template-columns: repeat(1, 1fr);
         place-content: center;
+        place-items: center;
 
-    }
-
-    @media (max-width: 320px) {
-
-
-    }
+    }  
 
 `
 
@@ -103,9 +99,15 @@ export const Pack = styled.div`
 
     @media (max-width: 350px) {
 
-        width: 250px;
+        width: 70%;
 
 }
+
+    @media (max-width: 250px) {
+        
+        width: 80%; 
+
+    }
 `
 
 export const PackTitle = styled.div`
@@ -127,5 +129,10 @@ export const PackPrice = styled.div`
     justify-content: space-between;
     & span {
         font-weight: 600;
+    }
+
+    @media (max-width: 350px) {
+        flex-direction: column;
+        gap: 20px;
     }
 `

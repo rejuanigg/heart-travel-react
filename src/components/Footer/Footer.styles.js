@@ -25,6 +25,14 @@ export const FooterList = styled.ul`
     @media screen and (max-width: 350px) {
         width: 60%;
     }
+
+    @media (max-width: 250px) {
+        
+        & h5 {
+            font-size: 12px;
+        }
+
+    }
 `
 
 export const BorderImg = styled.div`
@@ -62,6 +70,13 @@ export const FooterLink = styled.a`
 
         font-size: 12px;
         
+    }
+
+
+    @media (max-width: 250px) {
+        
+        font-size: 8px;   
+
     }
     
 `

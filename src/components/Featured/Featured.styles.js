@@ -19,11 +19,24 @@ export const FeaturedWrapper = styled.div`
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     place-items: center;
+    place-content: center;
 
     @media screen and (max-width: 350px) {
 
         grid-template-columns: repeat(1, 1fr);
         place-content: center;
+        
+    }
+
+    @media screen and (max-width: 1300px) {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    @media screen and (max-width: 769px) {
+
+        grid-template-columns: repeat(1, 1fr);
         
     }
 `
@@ -67,8 +80,16 @@ export const FeaturedBox = styled.div`
     @media screen and (max-width: 350px) {
 
         width: 90%;
-
+        
     }
+
+    @media(max-width: 280px) {
+    
+    display: flex;
+    flex-direction: column;
+}
+
+    
 `
 
 export const FeaturedInfo = styled.div`
@@ -99,6 +120,12 @@ export const FeaturedPrice = styled.div`
             font-size: 20px;
         }
         
+    }
+
+    @media(max-width: 280px) {
+    
+        flex-direction: column;
+
     }
 
 `

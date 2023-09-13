@@ -7,12 +7,13 @@ export const HeroContainer = styled.div`
     justify-content: center;
 
     & img {
-        height: 600px;
+        height: 80%;
         width: 90%;
         position: absolute;
         object-fit: cover;
         margin: 20px;
     }
+
 
     @media (max-width: 350px) {
 
@@ -25,19 +26,34 @@ export const HeroContainer = styled.div`
     }
 `
 
+export const GradientImg = styled.img`
+    display: flex;
+    justify-content: center;
+    opacity: 0.7;
+`
+
 export const InfoPage = styled.div `
     position: relative;
-    z-index: 2;
     display: flex;
     justify-content: space-between;
-    align-items: start;
     color: #EAEAEA;
     width: 80%;
     margin: 40px;
+    gap: 90px;
 
+
+    
     @media screen and (max-width: 350px) {
         flex-direction: column;
-        padding: 100px 0;
+        padding: 60px 0;
+
+}
+
+    @media (max-width: 600px) {
+
+        flex-direction: column;
+        gap: 0;
+
 }
 
 `
@@ -48,17 +64,69 @@ export const HeroTitleContainer = styled.div `
     height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
 
     & h1 {
         font-family: 'Lobster', cursive;
-        font-size: 100px;
+        font-size: 60px;
+        width: 120%;
 
     }
 
     & p {
         font-size: 15px;
+        width: 80%;
     }
+
+    @media (max-width: 1189px) {
+
+        width: 50%;    
+
+    }
+
+    @media (max-width: 952px) {
+
+        width: 80%;
+
+        & h1 {
+            font-size: 60px;
+        }
+
+        & p {
+
+            font-size: 13px;
+        }
+
+    }
+
+    @media (max-width: 670px) {
+
+        & h1 {
+            font-size: 50px;
+        } 
+
+        & p {
+
+            font-size: 12px;
+        }
+
+}
+
+    @media (max-width: 430px) {
+    
+        & h1 {
+            font-size: 40px;
+        }
+
+        & p {
+            font-size: 10px;
+            width: 100%;
+        }
+
+    }
+
+
 
     @media screen and (max-width: 350px) {
 
@@ -66,8 +134,9 @@ export const HeroTitleContainer = styled.div `
         justify-content: center;
 
         & h1 {
-            font-size: 60px;
+            font-size: 40px;
             margin: 0;
+            width: 30%;
         }
 
         & p {
@@ -75,11 +144,37 @@ export const HeroTitleContainer = styled.div `
         }
 }
 
+
+    @media (max-width: 250px) {
+        
+        & h1 { 
+            font-size: 30px;  
+
+        }
+
+        & p {
+            font-size: 8px;
+        }
+
+}
 `
 
 export const SubTitle = styled.div `
-    @media screen and (max-width: 350px) {
 
+margin: 0 20px 0 0;
+
+    @media screen and (max-width: 350px) {
         font-size: 12px; ;
     }
+    @media (max-width: 600px) {
+
+        font-size: 15px;
+
+    }
+
+    @media (max-width: 600px) {
+
+        font-weight: 600;
+
+}
 `

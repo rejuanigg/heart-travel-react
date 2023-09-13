@@ -32,42 +32,10 @@ const Packs = () => {
             </PackTitle>
             <PackPrice>
                 <span>$8000</span>
-                <Button>Reservar</Button>
+                <Button style={{width:'50%'}}>Reservar</Button>
             </PackPrice>
           </Pack>
-          <Pack>
-            <img src='https://res.cloudinary.com/doouoldof/image/upload/v1693486130/vistas_o8wqfi.jpg' alt='pack' />
-            <PackTitle>
-                <h3>Tucumán</h3>
-                <p>Rafting, Montañas</p>
-            </PackTitle>
-            <PackPrice>
-                <span>$8000</span>
-                <Button>Reservar</Button>
-            </PackPrice>
-          </Pack>
-          <Pack>
-            <img src='https://res.cloudinary.com/doouoldof/image/upload/v1693486130/vistas_o8wqfi.jpg' alt='pack' />
-            <PackTitle>
-                <h3>Tucumán</h3>
-                <p>Rafting, Montañas</p>
-            </PackTitle>
-            <PackPrice>
-                <span>$8000</span>
-                <Button>Reservar</Button>
-            </PackPrice>
-          </Pack>
-          <Pack>
-            <img src='https://res.cloudinary.com/doouoldof/image/upload/v1693486130/vistas_o8wqfi.jpg' alt='pack' />
-            <PackTitle>
-                <h3>Tucumán</h3>
-                <p>Rafting, Montañas</p>
-            </PackTitle>
-            <PackPrice>
-                <span>$8000</span>
-                <Button>Reservar</Button>
-            </PackPrice>
-          </Pack>
+          
           
           
         </PacksList>

@@ -22,7 +22,13 @@ export const NavbarContainer = styled.header`
         img {
             height: 50px;
         }
+    }
 
+    @media (max-width: 250px) {
+
+        img {
+            height: 40px;
+        }
 
     }
 `
@@ -34,11 +40,26 @@ export const NavbarLinks = styled.nav`
     width: 30%;
     height: 100%;
     gap: 8px;
+
+    @media (max-width: 600px) {
+
+        width: 50%;
+
+    }
+
+    @media (max-width: 490px) {
+    
+        display: none;
+
+    }
+
     @media (max-width: 350px) {
 
         display: none;
 
     }
+
+
 `
 
 export const NavbarLink = styled.a`
@@ -73,4 +94,5 @@ export const LoginLink = styled(NavbarLink)`
         background: linear-gradient(90deg, rgba(16,174,240,1) 0%, rgba(69,93,213,1) 17%, rgba(99,47,198,1) 65%, rgba(159,34,179,1) 100%);
         color: #EAEAEA;
         }
+
 `
