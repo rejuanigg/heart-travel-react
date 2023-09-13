@@ -29,7 +29,6 @@ export const HeroContainer = styled.div`
 export const GradientImg = styled.img`
     display: flex;
     justify-content: center;
-    opacity: 0.7;
 `
 
 export const InfoPage = styled.div `
