@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 
 export const LayoutContainer = styled.div`
-    width: 100%;
     height: auto;
-    display: flex;  
+    width: 100%;
+    display: flex;
     flex-direction: column;
+    
+`
+
+export const LayoutContent = styled.div`
+    height: calc(100% - 80px);
 `

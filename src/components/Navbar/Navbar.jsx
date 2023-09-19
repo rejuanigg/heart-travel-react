@@ -1,32 +1,46 @@
-import { LoginLink, NavbarContainer, NavbarLink, NavbarLinks} from "./Navbar.styles"
-import {BiLogIn} from "react-icons/bi"
+import { MenuContainer, LoginLink ,NavbarContainer, NavbarLink, NavbarLinks, UserOptions, UserIcon, MenuIcon} from "./Navbar.styles"
 import logo from "./cartIcon/travel.svg"
-import {FaBars} from "react-icons/fa"
-
+import { useMenu } from "../Context/Context"
+import { useState } from 'react';
 
 const Navbar = () => {
+    const {menuOpen, setMenuOpen} = useMenu();
+    const [userMenuOpen, setUserMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    }
+
+    const toggleUserMenu = () => {
+        setUserMenuOpen(prevState => !prevState);
+    }
+
     return (
         <NavbarContainer>
             <div>
                 <a href="/#">
-                    <img src={logo}/>
+                    <img src={logo} alt="Logo"/>
                 </a>
             </div>
-            <NavbarLinks>
-                <NavbarLink href="/#">Home</NavbarLink>
-                <NavbarLink href="/#">Mapa</NavbarLink>
-                <NavbarLink href="/#">FAQ</NavbarLink>
+            <NavbarLinks menuOpen={menuOpen}>
+                <NavbarLink to="/"  >Home</NavbarLink>
+                <NavbarLink to='/products' >Productos</NavbarLink>
+                <NavbarLink to="/aboutUs"  >About Us</NavbarLink>
+                <NavbarLink to="/contactUs">Contactanos</NavbarLink>
             </NavbarLinks>
             
-            <div>
-                <LoginLink href="/#">Login<BiLogIn/></LoginLink>
-            </div>
+            <UserOptions>
+                <MenuContainer>
+                    <LoginLink href="/#">Login</LoginLink>
+                    <UserIcon onClick={toggleUserMenu}/>
+                    
+                </MenuContainer>
 
-                {/* <FaBars/> */}
-
+                <MenuIcon onClick={toggleMenu}/>
+            </UserOptions>
 
         </NavbarContainer>
     )
 }
 
-export default Navbar
+export default Navbar;

@@ -23,7 +23,7 @@ export const PacksTitle = styled.div`
 
 export const FilterContainer = styled.div`
     width: 90%;
-    height: 60px;
+    height: 80px;
     background-color: #eaeaea;
     display: grid;
     grid-gap: 2px;
@@ -65,7 +65,21 @@ export const PacksList = styled.div`
     justify-content: start;
     background-color: #eaeaea;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(3, 1fr); 
+
+    @media (max-width: 1184px) {
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+    }
+
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 650px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 
     @media (max-width: 350px) {
 
@@ -79,7 +93,7 @@ export const PacksList = styled.div`
 
 export const Pack = styled.div`
     width: 300px;
-    height: 400px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -87,14 +101,22 @@ export const Pack = styled.div`
     justify-content: center;
     background-color: #fafafa;
     border-radius: 5px;
-    padding: 20px;
+    padding: 0 20px;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.37);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.37);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.37);
 
-    & img {
-        max-width: 100%;
-        border-radius: 8px;
+    @media (max-width: 830px){
+        width: 250px;
+    }
+
+    @media (max-width: 768px) {
+        width: 200px;
+        gap: 15px;
+    }
+
+    @media (max-width: 650px) {
+        width: 250px;
     }
 
     @media (max-width: 350px) {
@@ -105,34 +127,79 @@ export const Pack = styled.div`
 
     @media (max-width: 250px) {
         
-        width: 80%; 
+        width: 85%; 
 
+    }
+`
+
+export const Image = styled.img `
+    width: 100%;
+    height: 40%;
+    border-radius: 8px;
+    @media (max-width: 350px) {
+        height: 30%;
     }
 `
 
 export const PackTitle = styled.div`
     width: 100%;
+    height: 20%;
     display: flex;
+    margin-bottom: 20px;
     flex-direction: column;
     align-items: start;
     justify-content: start;
     & h3 {
         color: rgba(69,80,213,1);
     }
+
+    & p {
+        margin: 0;
+        font-size: 14px;
+        text-align: justify;
+        @media (max-width: 830px){
+            font-size: 12px;
+        }
+
+    }
+
+    & span {
+        font-size: 14px;
+        font-weight: 600;
+        color: rgba(69,80,213,1);
+    }
+
+    @media (max-width: 768px) {
+
+        & h3 {
+            font-size: 16px;
+        }
+
+        & p {
+            font-size: 11px;
+        }
+
+        & span {
+            font-size: 11px;
+        }
+
+    }
 `
 
 export const PackPrice = styled.div`
     width: 100%;
+    height: 20%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-top: 20px;
     & span {
         font-weight: 600;
     }
 
     @media (max-width: 350px) {
         flex-direction: column;
-        gap: 20px;
+        gap: 1px;
     }
 `

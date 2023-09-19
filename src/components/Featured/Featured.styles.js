@@ -50,7 +50,7 @@ export const FeaturedTitle = styled.h2`
         animation: upAndDown 1s ease-in-out infinite;
     }
     @keyframes upAndDown {
-    0%, 100% {
+     100% {
         transform: translateY(0);
     }
     50% {

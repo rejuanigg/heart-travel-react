@@ -20,10 +20,14 @@ export const FooterList = styled.ul`
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: start;
+    align-items: start;
+
 
     @media screen and (max-width: 350px) {
-        width: 60%;
+        width: 20%;
+        gap: 10px;
+        
     }
 
     @media (max-width: 250px) {
@@ -93,4 +97,8 @@ export const FooterRedSocial = styled.div`
 
 export const LinkRedSocial = styled.a`
     font-size: 30px;
+
+    @media (max-width: 250px) {
+        font-size: 20px;
+    }
 `

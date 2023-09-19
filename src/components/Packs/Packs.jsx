@@ -1,6 +1,8 @@
 import React from 'react'
-import {FilterContainer, Filters, Pack, PackPrice, PackTitle, PacksContainer, PacksList, PacksTitle } from './Packs.styles'
+import {FilterContainer, Filters, Image, Pack, PackPrice, PackTitle, PacksContainer, PacksList, PacksTitle } from './Packs.styles'
 import { Button } from '../../styles/Global.styles'
+import Data from '../Data/provincias/data-provincias'
+import DataT from '../Data/turismo/data-turismo'
 
 const Packs = () => {
   return (
@@ -10,33 +12,50 @@ const Packs = () => {
             <h2>Paquetes de viaje</h2>
           </PacksTitle>
         <FilterContainer>
-          <Filters>Naturaleza Y Paisajes</Filters>
-          <Filters>Naturaleza Y Paisajes</Filters>
-          <Filters>Naturaleza Y Paisajes</Filters>
-          <Filters>Naturaleza Y Paisajes</Filters>
-          <Filters>Naturaleza Y Paisajes</Filters>
-          <Filters>Naturaleza Y Paisajes</Filters>
-          <Filters>Naturaleza Y Paisajes</Filters>
-          <Filters>Naturaleza Y Paisajes</Filters>
-          <Filters>Naturaleza Y Paisajes</Filters>
-          <Filters>Naturaleza Y Paisajes</Filters>
-          <Filters>Naturaleza Y Paisajes</Filters>
-          <Filters>Naturaleza Y Paisajes</Filters>
+
+          {
+            DataT?.map((Turismo)=>{
+              const {id, title} = Turismo;
+              return (
+                <Filters key={id}>{title}</Filters>
+              )
+            })
+          }
+
+
         </FilterContainer>
         <PacksList>
-          <Pack>
-            <img src='https://res.cloudinary.com/doouoldof/image/upload/v1693486130/vistas_o8wqfi.jpg' alt='pack' />
+
+
+          {
+            Data?.map((Province)=>{
+              const {
+                id, 
+                img, 
+                title, 
+                desc, 
+                approximateAmount,
+                departure
+              }
+                 = Province;
+              return (
+                <Pack key={id}>
+                <Image src={img} alt={title} />
             <PackTitle>
-                <h3>Tucumán</h3>
-                <p>Rafting, Montañas</p>
+                <h3>{title}</h3>
+                <span>Proxima Fecha: {departure}</span>
+                <p>{desc}</p>
+                
             </PackTitle>
             <PackPrice>
-                <span>$8000</span>
+                <span>${approximateAmount}</span>
                 <Button style={{width:'50%'}}>Reservar</Button>
             </PackPrice>
-          </Pack>
-          
-          
+           </Pack>
+              )
+                   
+            })
+          }
           
         </PacksList>
       </PacksContainer>

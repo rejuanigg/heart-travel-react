@@ -1,7 +1,14 @@
-import { LayoutContainer } from "./Layout.styles"
+import { LayoutContainer, LayoutContent } from "./Layout.styles"
+import Navbar from "../Navbar/Navbar"
 
 const Layout = ({children}) => {
-    return <LayoutContainer>{children}</LayoutContainer>
+    return (
+        <LayoutContainer>
+            <Navbar/>
+            <LayoutContent>{children}</LayoutContent>
+        </LayoutContainer>
+    )
+    
 }
 
 export default Layout

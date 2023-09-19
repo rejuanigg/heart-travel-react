@@ -272,3 +272,5 @@ export const Data = [
         driver: 'Juan', 
     }
 ]
+
+export default Data;

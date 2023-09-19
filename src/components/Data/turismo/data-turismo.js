@@ -1,4 +1,4 @@
-export const TurismoContainer = [
+export const DataT = [
 
     {
         id: 1,
@@ -61,3 +61,5 @@ export const TurismoContainer = [
         img:'https://res.cloudinary.com/doouoldof/image/upload/v1693761789/12_yeu2b9.jpg'
     }
 ]
+
+export default DataT;
