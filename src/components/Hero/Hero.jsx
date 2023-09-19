@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <>
         <HeroContainer>
-            <img src={background} alt="" />
+            <img src={background} alt="Cafayate, Salta" />
             <GradientImg src={gradient}/>
           <InfoPage>
             <HeroTitleContainer>

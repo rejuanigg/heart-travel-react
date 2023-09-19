@@ -42,7 +42,7 @@ const Info = () => {
 
 
       <InfoWrapper color='#d8eefe' id='seccion1'>
-        <Image src="https://res.cloudinary.com/doouoldof/image/upload/v1694982709/1_s16hbn.png" alt='SI'/>
+        <Image src="https://res.cloudinary.com/doouoldof/image/upload/v1694982709/1_s16hbn.png" alt='search'/>
           <InfoTextContainer>
           <InfoTitle color='#094067'>
             Viaja a Cualquier Rincón de la Argentina
@@ -57,7 +57,7 @@ const Info = () => {
       </InfoWrapper>
 
       <InfoWrapper color='#16161a' id='seccion2'>
-        <Image src="https://res.cloudinary.com/doouoldof/image/upload/v1694982710/4_tlxq4o.png" alt='SI'/>
+        <Image src="https://res.cloudinary.com/doouoldof/image/upload/v1694982710/4_tlxq4o.png" alt='hotel'/>
         <InfoTextContainer>
           <InfoTitle color='#7f5af0'>
             Alojamiento Incluido en tu Paquete
@@ -72,7 +72,7 @@ const Info = () => {
       </InfoWrapper>
 
       <InfoWrapper color='#d8eefe' id='seccion3'>
-      <Image src="https://res.cloudinary.com/doouoldof/image/upload/v1694982710/2_tx2bsr.png" alt='SI'/>
+      <Image src="https://res.cloudinary.com/doouoldof/image/upload/v1694982710/2_tx2bsr.png" alt='cellphone'/>
         <InfoTextContainer>
           <InfoTitle color='#094067'>
             Elige a Dónde Viajar desde tu Teléfono
@@ -87,7 +87,7 @@ const Info = () => {
       </InfoWrapper>
 
       <InfoWrapper color='#16161a' id='seccion4'>
-        <Image src="https://res.cloudinary.com/doouoldof/image/upload/v1694982710/3_phwpeg.png" alt='SI'/>
+        <Image src="https://res.cloudinary.com/doouoldof/image/upload/v1694982710/3_phwpeg.png" alt='malet'/>
         <InfoTextContainer>
           <InfoTitle color='#7f5af0'>
            Tu Equipaje Seguro con Nosotros
