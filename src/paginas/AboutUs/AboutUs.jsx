@@ -1,10 +1,12 @@
 import React from 'react'
-import Info from '../../components/Info/info'
+import Info from '../../components/Info/Info'
 
 
 const AboutUs = () => {
   return (
-    <Info/>
+    <>
+      <Info/>
+    </>
   )
 }
 
