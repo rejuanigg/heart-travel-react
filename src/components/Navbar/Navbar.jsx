@@ -2,6 +2,7 @@ import { MenuContainer, LoginLink ,NavbarContainer, NavbarLink, NavbarLinks, Use
 import logo from "./cartIcon/travel.svg"
 import { useMenu } from "../Context/Context"
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const {menuOpen, setMenuOpen} = useMenu();
@@ -18,9 +19,9 @@ const Navbar = () => {
     return (
         <NavbarContainer>
             <div>
-                <a href="/#">
+                <Link to="/">
                     <img src={logo} alt="Logo"/>
-                </a>
+                </Link>
             </div>
             <NavbarLinks menuOpen={menuOpen}>
                 <NavbarLink to="/"  >Home</NavbarLink>

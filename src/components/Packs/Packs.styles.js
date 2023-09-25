@@ -65,11 +65,11 @@ export const PacksList = styled.div`
     justify-content: start;
     background-color: #eaeaea;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
 
     @media (max-width: 1184px) {
         grid-template-columns: repeat(2, 1fr);
-        place-items: center;
     }
 
 
@@ -85,8 +85,6 @@ export const PacksList = styled.div`
 
         grid-template-columns: repeat(1, 1fr);
         place-content: center;
-        place-items: center;
-
     }  
 
 `

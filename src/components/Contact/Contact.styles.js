@@ -135,10 +135,12 @@ export const ContactInput = styled.input`
 `
 
 export const ContactTextArea = styled.textarea`
+    height: 100px;
     width: 50%;
     border: 2px solid #5f6c7b;
     border-radius: 5px;
     padding: 5px;
+    resize: none;
     @media (max-width: 768px) {
         width: 80%;   
     }
