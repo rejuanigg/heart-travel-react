@@ -44,11 +44,12 @@ const Navbar = () => {
                     <CartIcon onClick={toggleCart}/>
                     <ContentCart ref={cart}>
                         <CartTitle>Paquetes seleccionados</CartTitle>
-                        <CartItem></CartItem>
-                        <CartPrice>
-                            
-                            
 
+
+                        <CartItem></CartItem>
+
+                        
+                        <CartPrice>
                             <ContainerPrice>
                                 <InfoPrice>Total Productos</InfoPrice>
                                 <Price>2000</Price>
@@ -60,8 +61,8 @@ const Navbar = () => {
                             </ContainerPrice>
 
                             <CartButton>Comprar</CartButton>                            
-                            
                         </CartPrice>
+
                     </ContentCart>
                 </MenuContainer>
 

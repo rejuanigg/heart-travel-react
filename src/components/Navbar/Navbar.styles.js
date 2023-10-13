@@ -194,6 +194,7 @@ export const ContentCart = styled.div `
     box-shadow: -3px 6px 5px 0px rgba(130,130,130,0.65);
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     display: none;
 `
