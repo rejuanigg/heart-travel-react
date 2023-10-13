@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Link, NavLink } from 'react-router-dom';
 import {AiOutlineMenu, AiOutlineUser} from "react-icons/ai"
+import {FaShoppingCart} from "react-icons/fa"
 
 export const NavbarContainer = styled.header`
     background-color: #EAEAEA;
@@ -76,8 +77,11 @@ export const NavbarLinks = styled.nav`
 
 `
 
-
-
+export const CartIcon = styled(FaShoppingCart)`
+    color: rgba(16,174,240,1);
+    font-size: 20px;
+    cursor: pointer;
+`
 
 export const NavbarLink = styled(NavLink)`
     font-size: 1rem;
@@ -145,7 +149,7 @@ export const LoginLink = styled(Link)`
 export const MenuContainer = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 20px;
 `
 
 export const UserOptions = styled.div`
@@ -160,6 +164,7 @@ export const UserIcon = styled(AiOutlineUser)`
     background: linear-gradient(90deg, rgba(159,34,179,1) 0%, rgba(99,47,198,1) 37%, rgba(69,93,213,1) 68%, rgba(16,174,240,1) 99%);    font-weight: 500;
     color: #EAEAEA;
     padding: 5px;
+    cursor: pointer;
     border-radius: 50%;
 `
 
@@ -175,4 +180,62 @@ export const MenuIcon = styled(AiOutlineMenu)`
     @media (max-width: 768px) {
         display: block;
     }
+`
+
+export const ContentCart = styled.div `
+    width: 400px;
+    position: absolute;
+    background-color: #EAEAEA;
+    top: 80px;
+    right: 0;
+    height: 80%;
+    --webkit-box-shadow: -3px 6px 5px 0px rgba(130,130,130,0.65);
+    -moz-box-shadow: -3px 6px 5px 0px rgba(130,130,130,0.65);
+    box-shadow: -3px 6px 5px 0px rgba(130,130,130,0.65);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+`
+export const CartTitle = styled.h2 `
+    color: black;
+`
+
+export const CartItem = styled.div `
+    height: 120px;
+    width: 90%;
+    background-color: red;
+    border-radius: 8px;
+`
+
+export const CartPrice = styled.div `
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+`
+
+export const ContainerPrice = styled.div `
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
+
+export const InfoPrice = styled.p `
+
+`
+
+export const Price = styled.span `
+    font-weight: 700;
+`
+
+export const CartButton = styled.button `
+    width: 90%;
+    height: 40px;
+    background-color: red;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
 `

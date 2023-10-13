@@ -1,12 +1,19 @@
-import { MenuContainer, LoginLink ,NavbarContainer, NavbarLink, NavbarLinks, UserOptions, UserIcon, MenuIcon} from "./Navbar.styles"
+import { CartIcon, MenuContainer, LoginLink ,NavbarContainer, NavbarLink, NavbarLinks, UserOptions, UserIcon, MenuIcon, ContentCart, CartItem, CartTitle, CartPrice, InfoPrice, Price, ContainerPrice, CartButton} from "./Navbar.styles"
 import logo from "./cartIcon/travel.svg"
 import { useMenu } from "../Context/Context"
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const {menuOpen, setMenuOpen} = useMenu();
     const [userMenuOpen, setUserMenuOpen] = useState(false);
+    const [openCart, setOpenCart] = useState(false)
+    const cart = useRef(null)
+
+    const toggleCart = () => {
+        setOpenCart(prevState => prevState ? false : true)
+        cart.current.style.display = openCart ? "flex" : "none"     
+    }
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -34,7 +41,28 @@ const Navbar = () => {
                 <MenuContainer>
                     <LoginLink href="/#">Login</LoginLink>
                     <UserIcon onClick={toggleUserMenu}/>
-                    
+                    <CartIcon onClick={toggleCart}/>
+                    <ContentCart ref={cart}>
+                        <CartTitle>Paquetes seleccionados</CartTitle>
+                        <CartItem></CartItem>
+                        <CartPrice>
+                            
+                            
+
+                            <ContainerPrice>
+                                <InfoPrice>Total Productos</InfoPrice>
+                                <Price>2000</Price>
+                            </ContainerPrice>
+
+                            <ContainerPrice>
+                                <InfoPrice>Envío</InfoPrice>
+                                <Price>120</Price>
+                            </ContainerPrice>
+
+                            <CartButton>Comprar</CartButton>                            
+                            
+                        </CartPrice>
+                    </ContentCart>
                 </MenuContainer>
 
                 <MenuIcon onClick={toggleMenu}/>
